@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "http-helper",
+	"version": "${version}",
+	"name": "http-helper",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/http-helper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"server": [
+			"kadu.httphelper.Httphelper"
+		]
+	},
+	"mixins": [
+		"http-helper.mixins.json",
+		{
+			"config": "http-helper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
